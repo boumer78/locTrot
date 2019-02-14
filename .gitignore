@@ -14,5 +14,5 @@
 
 .gitignore
 .idea
-/vendor
+/vendor/
 var/cache
