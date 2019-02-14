@@ -12,6 +12,7 @@
 /.web-server-pid
 ###< symfony/web-server-bundle ###
 
-
-vendor
+.gitignore
+.idea
+/vendor
 var/cache
