@@ -2275,7 +2275,7 @@
 		ul.icons {
 			cursor: default;
 			list-style: none;
-			padding-left: 0;
+
 		}
 
 			ul.icons > li {
@@ -4120,7 +4120,7 @@
 	#footer {
 		background-color: #1E2832;
 		color: rgba(255, 255, 255, 0.75);
-		text-align: center;
+
 	}
 
 		#footer input, #footer select, #footer textarea {
@@ -4146,6 +4146,11 @@
 		#footer code {
 			background: rgba(255, 255, 255, 0.05);
 			border-color: transparent;
+		}
+		.information{
+			list-style-type: none;
+
+
 		}
 
 		#footer hr {
@@ -4187,10 +4192,15 @@
 			text-transform: uppercase;
 		}
 
-			#footer .copyright li {
-				display: inline-block;
+			#footer .information li {
+
 				list-style: none;
 				margin: 0 0.1em;
+			}
+
+			.foots{
+
+				margin-left: 40px;
 			}
 
 		@media screen and (max-width: 980px) {
