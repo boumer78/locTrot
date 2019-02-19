@@ -39,12 +39,7 @@ class ScooterController extends AbstractController
      */
     public function newScooter(Request $request)
     {
-        # Récupération d'un Membre
-        #$membre = $this->getDoctrine()
-        #    ->getRepository(Membre::class)
-        #    ->find(1);
-
-        # Création d'un Nouvel Article
+        
         $scooter = new Scooter();
 
         # Création du Formulaire

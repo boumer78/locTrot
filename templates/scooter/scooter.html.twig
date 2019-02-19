@@ -8,9 +8,9 @@
             <i class="fa fa-plus"></i> Ajouter une Trot
         </button>
 
-        <ul>
+        <ul id="list">
             {% for scooter in scooter %}
-                <li>{{ scooter.scooterName }}</li>
+                <li>{{ scooter.scooterName }} - {{ scooter.scooterModel}}</li>
             {% endfor %}
         </ul>
     </div>
@@ -61,13 +61,12 @@
         $form = $(e.target);
         modal = $('#exampleModal');
 
-        var title = $('#scooter_title').val();
+        var title = $('#scooterName').val();
 
         var $submitButton = $form.find(':submit');
         $submitButton.html('<i class="fas fa-spinner fa-pulse"></i>');
         $submitButton.prop('disabled', true);
 
-        // ajaxSubmit du plugin ajaxForm nécessaire pour l'upload de fichier
         $form.ajaxSubmit({
             type: 'post',
             success: function(data) {
