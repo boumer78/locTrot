@@ -3,9 +3,8 @@
  {% block stylesheets %}
 
 
-
-   <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
-
+     <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"/>
 
  {% endblock %}
 {% block header %}
@@ -14,9 +13,17 @@
 
 {% endblock %}
 
+
 {% block body %}
+
+    {% block content '' %}
 {% endblock %}
 
+{% block footer %}
+
+    {% include 'component/_footer.html.twig' %}
+
+{% endblock %}
 {% block javascripts %}
     <!-- Scripts -->
     <script src="{{  asset("js/jquery.min.js") }}"></script>
@@ -25,3 +32,4 @@
     <script src="{{  asset("js/main.js") }}"></script>
 
 {% endblock %}
+
