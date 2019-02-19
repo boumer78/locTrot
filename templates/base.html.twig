@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-    {% block header %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <title>{% block title %}LocTaTrott'!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% block header %}
 
-    {% endblock %}
+{% endblock %}
 
-    {% block body '' %}
-        {% block javascripts %}{% endblock %}
-    </body>
+{% block body %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
 </html>

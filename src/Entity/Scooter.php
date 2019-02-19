@@ -8,8 +8,9 @@ use Doctrine\ORM\Mapping as ORM;
  * Scooter
  *
  * @ORM\Table(name="scooter")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ScooterRepository")
  */
+
 class Scooter
 {
     /**
@@ -55,6 +56,71 @@ class Scooter
      * @ORM\Column(name="scooter_statement", type="string", length=45, nullable=true)
      */
     private $scooterStatement;
+
+    public function getIdscooter(): ?int
+    {
+        return $this->idscooter;
+    }
+
+    public function getScooterName(): ?string
+    {
+        return $this->scooterName;
+    }
+
+    public function setScooterName(?string $scooterName): self
+    {
+        $this->scooterName = $scooterName;
+
+        return $this;
+    }
+
+    public function getScooterDateEntry(): ?\DateTimeInterface
+    {
+        return $this->scooterDateEntry;
+    }
+
+    public function setScooterDateEntry(?\DateTimeInterface $scooterDateEntry): self
+    {
+        $this->scooterDateEntry = $scooterDateEntry;
+
+        return $this;
+    }
+
+    public function getScooterDateNextMaintenance(): ?\DateTimeInterface
+    {
+        return $this->scooterDateNextMaintenance;
+    }
+
+    public function setScooterDateNextMaintenance(?\DateTimeInterface $scooterDateNextMaintenance): self
+    {
+        $this->scooterDateNextMaintenance = $scooterDateNextMaintenance;
+
+        return $this;
+    }
+
+    public function getScooterDateLastMaintenance(): ?\DateTimeInterface
+    {
+        return $this->scooterDateLastMaintenance;
+    }
+
+    public function setScooterDateLastMaintenance(?\DateTimeInterface $scooterDateLastMaintenance): self
+    {
+        $this->scooterDateLastMaintenance = $scooterDateLastMaintenance;
+
+        return $this;
+    }
+
+    public function getScooterStatement(): ?string
+    {
+        return $this->scooterStatement;
+    }
+
+    public function setScooterStatement(?string $scooterStatement): self
+    {
+        $this->scooterStatement = $scooterStatement;
+
+        return $this;
+    }
 
 
 }
