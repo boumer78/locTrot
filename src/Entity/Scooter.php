@@ -140,16 +140,6 @@ class Scooter
     }
 
     /**
-     * @return int
-     */
-
-    public function getIdscooter(): ?int
-
-    {
-        return $this->idscooter;
-    }
-
-    /**
      * @param int $idscooter
      */
     public function setIdscooter(int $idscooter): void
@@ -159,87 +149,6 @@ class Scooter
 
 
 
-    /**
-     * @return string|null
-     */
-    public function getScooterName(): ?string
-    {
-        return $this->scooterName;
-    }
-
-    /**
-     * @param string|null $scooterName
-     * @return Scooter
-     */
-    public function setScooterName(?string $scooterName): self
-    {
-        $this->scooterName = $scooterName;
-
-        return $this;
-    }
-
-    /**
-     * @return \DateTime|null
-     */
-
-    public function getScooterDateEntry(): ?DateTimeInterface
-
-    {
-        return $this->scooterDateEntry;
-    }
-
-
-    /**
-     * @param \DateTime|null $scooterDateEntry
-     */
-    public function setScooterDateEntry(?DateTimeInterface $scooterDateEntry): self
-    {
-        $this->scooterDateEntry = $scooterDateEntry;
-
-        return $this;
-    }
-
-    /**
-     * @return \DateTime|null
-     */
-    public function getScooterDateNextMaintenance(): ?DateTimeInterface
-
-    {
-        return $this->scooterDateNextMaintenance;
-    }
-
-    /**
-     * @param DateTimeInterface|null $scooterDateNextMaintenance
-     * @return Scooter
-     */
-    public function setScooterDateNextMaintenance(?DateTimeInterface $scooterDateNextMaintenance): self
-    {
-        $this->scooterDateNextMaintenance = $scooterDateNextMaintenance;
-
-        return $this;
-    }
-
-    public function getScooterDateLastMaintenance(): ?DateTimeInterface
-    {
-        return $this->scooterDateLastMaintenance;
-    }
-
-
-    /**
-     * @param DateTimeInterface|null $scooterDateLastMaintenance
-     * @return Scooter
-     */
-    public function setScooterDateLastMaintenance(?DateTimeInterface $scooterDateLastMaintenance): self
-    {
-        $this->scooterDateLastMaintenance = $scooterDateLastMaintenance;
-
-        return $this;
-    }
-
-    public function getScooterStatement(): ?string
-    {
-        return $this->scooterStatement;
-    }
 
     /**
      * @return string|null
@@ -255,17 +164,6 @@ class Scooter
     public function setScooterModel(?string $scooter_model): void
     {
         $this->scooter_model = $scooter_model;
-    }
-
-    /**
-     * @param string|null $scooterStatement
-     * @return Scooter
-     */
-    public function setScooterStatement(?string $scooterStatement): self
-    {
-        $this->scooterStatement = $scooterStatement;
-
-        return $this;
     }
 
 
