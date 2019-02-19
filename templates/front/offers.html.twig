@@ -1,0 +1,49 @@
+{% extends "layout.html.twig" %}
+
+
+{% block body %}
+
+    <!-- Header -->
+    <section id="offerheader" style="background: #07090c ; height: 10em">
+    </section>
+
+    <!-- The 3 offers -->
+        <div class="container">
+            <div>
+                <h2 class="my-3">Choisissez votre offre</h2>
+            </div>
+            <div class="row">
+                {% for offers in offers %}
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div style="height: 300px">
+                            <img class="card-img-top"
+                                 src="{{ asset('images/product/' ~ offers.pictures) }}"
+                                 alt="Card image cap" style="width: 100%; height: 100%">
+                        </div>
+                        <h3 class="text-center mt-3">{{ offers.offername }}</h3>
+                        <div class="card-body">
+                            <div style="height: 300px">
+                                <p class="card-text">{{ offers.description }}</p>
+                                <p class="card-text">{{ offers.options }}</p>
+                            </div>
+                            <div>
+                                <a href="#" class="button big alt">{{ offers.price }}</a>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div>
+                <h2>
+                    <a href="#">Personnaliser mon offre</a>
+                </h2>
+            </div>
+
+        </div>
+{% endblock %}
+
+

@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -28,6 +29,12 @@ class Scooter
      * @ORM\Column(name="scooter_name", type="string", length=45, nullable=true)
      */
     private $scooterName;
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="scooter_model", type="string", length=45, nullable=true)
+     */
+    private $scooter_model;
 
     /**
      * @var \DateTime|null
@@ -115,6 +122,145 @@ class Scooter
         return $this->scooterStatement;
     }
 
+    public function setScooterStatement(?string $scooterStatement): self
+    {
+        $this->scooterStatement = $scooterStatement;
+
+        return $this;
+    }
+
+
+    /**
+     * Scooter constructor.
+     * @throws \Exception
+     */
+    public function __construct()
+    {
+        $this->scooterDateEntry = new \DateTime();
+    }
+
+    /**
+     * @return int
+     */
+
+    public function getIdscooter(): ?int
+
+    {
+        return $this->idscooter;
+    }
+
+    /**
+     * @param int $idscooter
+     */
+    public function setIdscooter(int $idscooter): void
+    {
+        $this->idscooter = $idscooter;
+    }
+
+
+
+    /**
+     * @return string|null
+     */
+    public function getScooterName(): ?string
+    {
+        return $this->scooterName;
+    }
+
+    /**
+     * @param string|null $scooterName
+     * @return Scooter
+     */
+    public function setScooterName(?string $scooterName): self
+    {
+        $this->scooterName = $scooterName;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime|null
+     */
+
+    public function getScooterDateEntry(): ?DateTimeInterface
+
+    {
+        return $this->scooterDateEntry;
+    }
+
+
+    /**
+     * @param \DateTime|null $scooterDateEntry
+     */
+    public function setScooterDateEntry(?DateTimeInterface $scooterDateEntry): self
+    {
+        $this->scooterDateEntry = $scooterDateEntry;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime|null
+     */
+    public function getScooterDateNextMaintenance(): ?DateTimeInterface
+
+    {
+        return $this->scooterDateNextMaintenance;
+    }
+
+    /**
+     * @param DateTimeInterface|null $scooterDateNextMaintenance
+     * @return Scooter
+     */
+    public function setScooterDateNextMaintenance(?DateTimeInterface $scooterDateNextMaintenance): self
+    {
+        $this->scooterDateNextMaintenance = $scooterDateNextMaintenance;
+
+        return $this;
+    }
+
+    public function getScooterDateLastMaintenance(): ?DateTimeInterface
+    {
+        return $this->scooterDateLastMaintenance;
+    }
+
+
+    /**
+     * @param DateTimeInterface|null $scooterDateLastMaintenance
+     * @return Scooter
+     */
+    public function setScooterDateLastMaintenance(?DateTimeInterface $scooterDateLastMaintenance): self
+    {
+        $this->scooterDateLastMaintenance = $scooterDateLastMaintenance;
+
+        return $this;
+    }
+
+    public function getScooterStatement(): ?string
+    {
+        return $this->scooterStatement;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getScooterModel(): ?string
+    {
+        return $this->scooter_model;
+    }
+
+    /**
+     * @param string|null $scooter_model
+     */
+    public function setScooterModel(?string $scooter_model): void
+    {
+        $this->scooter_model = $scooter_model;
+    }
+
+    /**
+     * @param string|null $scooterStatement
+     * @return Scooter
+     */
     public function setScooterStatement(?string $scooterStatement): self
     {
         $this->scooterStatement = $scooterStatement;

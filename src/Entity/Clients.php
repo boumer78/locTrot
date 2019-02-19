@@ -10,8 +10,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * Clients
  * @ORM\Table(name="clients")
  * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
- */
-
+*/
 class Clients implements UserInterface
 {
     /**
@@ -64,7 +63,6 @@ class Clients implements UserInterface
      * @ORM\Column(name="password", type="string", length=255, nullable=true)
      */
     private $password;
-
     /**
      * @ORM\Column(type="array")
      */
@@ -79,10 +77,10 @@ class Clients implements UserInterface
         $this->registerDate = new \DateTime();
     }
     public function getIdclients(): int
+
     {
         return $this->idclients;
     }
-
     /**
      * @param int $idclients
      */
@@ -106,6 +104,15 @@ class Clients implements UserInterface
     public function setPassword(?string $password): self
     {
         $this->password = $password;
+    }
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(?string $lastname): self
+    {
+        $this->lastname = $lastname;
 
         return $this;
     }
@@ -145,6 +152,18 @@ class Clients implements UserInterface
     /**
      * @return string|null
      */
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(?string $firstname): self
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
     public function getMail(): ?string
     {
         return $this->mail;
@@ -156,38 +175,6 @@ class Clients implements UserInterface
     public function setMail(?string $mail): void
     {
         $this->mail = $mail;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getFirstname(): ?string
-    {
-        return $this->firstname;
-    }
-
-    /**
-     * @param string|null $firstname
-     */
-    public function setFirstname(?string $firstname): void
-    {
-        $this->firstname = $firstname;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getLastname(): ?string
-    {
-        return $this->lastname;
-    }
-
-    /**
-     * @param string|null $lastname
-     */
-    public function setLastname(?string $lastname): void
-    {
-        $this->lastname = $lastname;
     }
 
     /**
@@ -221,5 +208,6 @@ class Clients implements UserInterface
     public function eraseCredentials()
     {
     }
+
 
 }
