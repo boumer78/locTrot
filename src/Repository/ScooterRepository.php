@@ -43,6 +43,18 @@ class ScooterRepository extends ServiceEntityRepository
             ->getResult()
             ;
     }
+
+    public function findLastScooter()
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.idscooter', 'DESC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+
     // /**
     //  * @return Scooter[] Returns an array of Scooter objects
     //  */

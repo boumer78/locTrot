@@ -51,42 +51,47 @@ class ScooterController extends AbstractController
 //        ]);
     }
 
-//    /**
-//     * @Route("/scooter/tabStock", name="tab_stock")
-//     */
-//    public function tabScooter(){
-//        $repository = $this->getDoctrine()->getRepository(Scooter::class);
-//        $scooter = $repository->findAll();
-//        return $this->render('scooter/tabStock.html.twig', [
-//            'scooter' => $scooter,
-//        ]);
-//    }
     /**
      * @Route("/scooter/tabStock", name="tab_stock")
      */
-    public function tabScooter()
-    {
-        $scooter='';
-        # Récupération du Repository
-        $repository = $this->getDoctrine()
-            ->getRepository(Scooter::class);
+    public function tabScooter(){
+        $repository = $this->getDoctrine()->getRepository(Scooter::class);
 
-        if ($repository['id_offer'] === 0){
-            $scooter = $repository->findFirstOffer();
-         }
-        if ($repository['id_offer'] === 1){
-            $scooter = $repository->findSecondOffer();
-        }
-        if ($repository['id_offer'] === 2){
-            $scooter = $repository->findThirdOffer();
-        }
+        $scooter = $repository->findLastScooter();
 
-
-        return $this->render('scooter/tabStock.html.twig',[
-            'scooter'=> $scooter
+        return $this->render('scooter/tabStock.html.twig', [
+            'scooter' => $scooter,
         ]);
-
     }
+
+
+
+//    /**
+//     * @Route("/scooter/tabStock", name="tab_stock")
+//     */
+//    public function tabScooter()
+//    {
+//        $scooter='';
+//        # Récupération du Repository
+//        $repository = $this->getDoctrine()
+//            ->getRepository(Scooter::class);
+//
+//        if ($repository['id_offer'] === 0){
+//            $scooter = $repository->findFirstOffer();
+//         }
+//        if ($repository['id_offer'] === 1){
+//            $scooter = $repository->findSecondOffer();
+//        }
+//        if ($repository['id_offer'] === 2){
+//            $scooter = $repository->findThirdOffer();
+//        }
+//
+//
+//        return $this->render('scooter/tabStock.html.twig',[
+//            'scooter'=> $scooter
+//        ]);
+//
+//    }
 
 
     /**
