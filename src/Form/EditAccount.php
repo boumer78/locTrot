@@ -6,7 +6,7 @@
  * Time: 10:09
  */
 
-namespace App\Form;
+namespace App\form;
 
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;

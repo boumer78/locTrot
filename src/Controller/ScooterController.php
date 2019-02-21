@@ -10,7 +10,7 @@ namespace App\Controller;
 
 
 use App\Entity\Scooter;
-use App\Form\ScooterFormType;
+use App\form\ScooterFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -51,18 +51,19 @@ class ScooterController extends AbstractController
 //        ]);
     }
 
-    /**
-     * @Route("/scooter/tabStock", name="tab_stock")
-     */
-    public function tabScooter(){
-        $repository = $this->getDoctrine()->getRepository(Scooter::class);
-
-        $scooter = $repository->findLastScooter();
-
-        return $this->render('scooter/tabStock.html.twig', [
-            'scooter' => $scooter,
-        ]);
-    }
+//    /**
+//     * @Route("/scooter/tabStock", name="tab_stock")
+//     * @param Scooter $scooter
+//     * @return \Symfony\Component\HttpFoundation\JsonResponse
+//     */
+//    public function tabScooter(){
+//
+//        $repository = $this->getDoctrine()->getRepository(Scooter::class);
+//
+//        $scooter = $repository->findLastScooter();
+//
+//        return $this->json(['idScooter'=>$scooter["idScooter"]],200);
+//    }
 
 
 

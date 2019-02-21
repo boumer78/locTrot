@@ -140,15 +140,15 @@
             }
         });
     });
-    $(document).on('hide.bs.modal', function () {
-        var tab = $(this);
-        $.ajax('{{ path('tab_stock') }}', {
-            success: function(data) {
-                console.log(data),
-                tab.find('#list').html(data);
-            }
-        });
-    });
+    {#$(document).on('hide.bs.modal', function () {#}
+        {#var tab = $(this);#}
+        {#$.ajax('{{ path('tab_stock') }}', {#}
+            {#success: function(data) {#}
+                {#console.log(data),#}
+                {#tab.find('#list').html(data);#}
+            {#}#}
+        {#});#}
+    {#});#}
 
     $(document).on('submit', 'form', function(e){
         e.preventDefault();

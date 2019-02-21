@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class FrontController extends AbstractController
 {
     /**
-     * @Route("/home", name="home_page")
+     * @Route("/", name="home_page")
      */
     public function index()
     {
