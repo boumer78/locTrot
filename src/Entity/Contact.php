@@ -1,111 +1,74 @@
 <?php
+
 namespace App\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
+
 /**
- * Contact
- *
- * @ORM\Table(name="contact")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\ContactRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
  */
 class Contact
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
      */
-    private $id_contact;
+    private $id;
+
     /**
-     * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(type="string", length=255)
      */
     private $name;
+
     /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=255)
+     * @ORM\Column(type="string", length=255)
      */
     private $email;
+
     /**
-     * @var string
-     *
-     * @ORM\Column(name="message", type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $message;
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
+
+    public function getId(): ?int
     {
-        return $this->id_contact;
+        return $this->id;
     }
-    /**
-     * Set name
-     *
-     * @param string $name
-     *
-     * @return Contact
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-        return $this;
-    }
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
+
+    public function getName(): ?string
     {
         return $this->name;
     }
-    /**
-     * Set email
-     *
-     * @param string $email
-     *
-     * @return Contact
-     */
-    public function setEmail($email)
+
+    public function setName(string $name): self
     {
-        $this->email = $email;
+        $this->name = $name;
+
         return $this;
     }
-    /**
-     * Get email
-     *
-     * @return string
-     */
-    public function getEmail()
+
+    public function getEmail(): ?string
     {
         return $this->email;
     }
 
-    /**
-     * Set message
-     *
-     * @param string $message
-     *
-     * @return Contact
-     */
-    public function setMessage($message)
+    public function setEmail(string $email): self
     {
-        $this->message = $message;
+        $this->email = $email;
+
         return $this;
     }
-    /**
-     * Get message
-     *
-     * @return string
-     */
-    public function getMessage()
+
+    public function getMessage(): ?string
     {
         return $this->message;
+    }
+
+    public function setMessage(string $message): self
+    {
+        $this->message = $message;
+
+        return $this;
     }
 }
