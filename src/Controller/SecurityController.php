@@ -9,7 +9,7 @@
 namespace App\Controller;
 
 
-use App\Form\LoginFormType;
+use App\form\LoginFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
