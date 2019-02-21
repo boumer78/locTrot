@@ -104,6 +104,8 @@ class Clients implements UserInterface
     public function setPassword(?string $password): self
     {
         $this->password = $password;
+
+        return $this;
     }
     public function getLastname(): ?string
     {

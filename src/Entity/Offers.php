@@ -81,9 +81,9 @@ class Offers
         return $this->description;
     }
 
-    public function setDescription($description): self
+    public function setDescription($description): ?string
     {
-        $this->description = $description;
+        return $this->description = $description;
     }
 
     public function getPrice(): ?string
