@@ -35,7 +35,7 @@
                         <td>{{ scooter.scooterModel }} </td>
                         <td>05646514</td>
                         <td>{{ scooter.scooterDateEntry|date('d-m-Y') }}</td>
-                        <td><i class="fas fa-trash-alt"></i></td>
+                        <td><a href="javascript:void(0)" onclick="deleteScooter({{ scooter.idscooter }});"><i class="fas fa-trash-alt"></i></a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
@@ -63,7 +63,7 @@
                     <td>{{ scooter.scooterModel }} </td>
                     <td>05646514</td>
                     <td>{{ scooter.scooterDateEntry|date('d-m-Y') }}</td>
-                    <td><i class="fas fa-trash-alt"></i></td>
+                    <td><a href="javascript:void(0)" onclick="deleteScooter({{ scooter.idscooter }});"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
             {% endfor %}
             </tbody>
@@ -85,13 +85,13 @@
             </thead>
             <tbody id="list">
             {% for scooter in thirdOffer %}
-                <tr>
+                <tr id="scooter-js">
                     <td>{{ scooter.idscooter }} </td>
                     <td>{{ scooter.scooterName }} </td>
                     <td>{{ scooter.scooterModel }} </td>
                     <td>05646514</td>
                     <td>{{ scooter.scooterDateEntry|date('d-m-Y') }}</td>
-                    <td><i class="fas fa-trash-alt"></i></td>
+                    <td><a href="javascript:void(0)" onclick="deleteScooter({{ scooter.idscooter }});"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
             {% endfor %}
             </tbody>
@@ -149,6 +149,18 @@
             {#}#}
         {#});#}
     {#});#}
+    function deleteScooter(idScooter) {
+        $.ajax({
+            type: 'POST',
+            url: '/scooter/delete/' + idScooter,
+            data: {idScooter: idScooter},
+            dataType: 'JSON',
+        })
+            .done((data) => {
+                console.log(data);
+                link.find('#scooter-js').html(data);
+            });
+    };
 
     $(document).on('submit', 'form', function(e){
         e.preventDefault();

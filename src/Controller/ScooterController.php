@@ -115,7 +115,6 @@ class ScooterController extends AbstractController
 
             # Sauvegarde en BDD
             $em = $this->getDoctrine()->getManager();
-            $em->persist($scooter);
             $em->flush();
             return new Response('success');
 
@@ -127,5 +126,24 @@ class ScooterController extends AbstractController
             'form' => $form->createView()
         ]);
 
+    }
+
+    /**
+     * @Route("/scooter/delete/{id}", name="scooter_delete")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     */
+    public function deleteScooter(Request $request)
+    {
+        $idScooter = $request->get('idScooter');
+        $scooter = $this->getDoctrine()
+            ->getRepository(Scooter::class)
+            ->find($idScooter);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($scooter);
+        $em->flush();
+
+        return $this->json(['delete'=>'ok','id'=>$request->get('idScooter')]);
     }
 }
