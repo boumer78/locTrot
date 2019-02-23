@@ -1,5 +1,7 @@
 <!-- Header -->
+<section id="one" class="wrapper style2" style="height: 3px;"></section>
 <body class="landing">
+<div>
 <header id="header" class="alt">
     <h1><a href="home">LocTaTrott'</a></h1>
     <a href="#nav">Menu</a>
@@ -15,6 +17,9 @@
             <li>
                 <a href="{{ path('security_deconnexion') }}">Deconnexion</a>
             </li>
+            <li>
+                <a href="{{ path('account_reset_password') }}">Modifier mon mot de passe</a>
+            </li>
         {% else %}
             <li>
                 <a href="{{ path('security_connexion') }}">Connexion</a>
@@ -22,8 +27,11 @@
             <li>
                 <a href="{{ path('new_clients') }}">Inscription</a>
             </li>
+
         {% endif %}
         <li><a href="{{ 'contact' }}">Contact</a> </li>
+
         <li><a href="">Gestion Profil</a></li>
     </ul>
 </nav>
+</div>
