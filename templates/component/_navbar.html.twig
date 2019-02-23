@@ -3,7 +3,7 @@
 <section id="one" class="wrapper style2"></section>
 <body class="landing">
 <header id="header" class="alt">
-    <h1><a href="home">LocTaTrott'</a></h1>
+    <h1><a href="{{ path('home_page') }}">LocTaTrott'</a></h1>
     <a href="#nav">Menu</a>
 </header>
 
@@ -17,6 +17,11 @@
             <li>
                 <a href="{{ path('security_deconnexion') }}">Deconnexion</a>
             </li>
+            {% if is_granted('ROLE_ADMIN') %}
+                <li>
+                    <a href="{{ path('scooter') }}">Administration</a>
+                </li>
+            {% endif %}
         {% else %}
             <li>
                 <a href="{{ path('security_connexion') }}">Connexion</a>
@@ -24,6 +29,7 @@
             <li>
                 <a href="{{ path('new_clients') }}">Inscription</a>
             </li>
+
         {% endif %}
         <li><a href="{{ 'contact' }}">Contact</a> </li>
         <li><a href="">Gestion Profil</a></li>
