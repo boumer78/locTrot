@@ -9,7 +9,7 @@
 namespace App\Controller;
 
 
-use App\form\ClientFormType;
+use App\Form\ClientFormType;
 use App\Entity\Clients;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

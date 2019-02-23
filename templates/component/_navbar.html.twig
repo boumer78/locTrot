@@ -1,9 +1,9 @@
 <!-- Header -->
-<section id="one" class="wrapper style2" style="height: 3px;"></section>
+<section id="one" class="wrapper style2"></section>
 <body class="landing">
 <div>
 <header id="header" class="alt">
-    <h1><a href="home">LocTaTrott'</a></h1>
+    <h1><a href="{{ path('home_page') }}">LocTaTrott'</a></h1>
     <a href="#nav">Menu</a>
 </header>
 
@@ -17,9 +17,16 @@
             <li>
                 <a href="{{ path('security_deconnexion') }}">Deconnexion</a>
             </li>
+
             <li>
                 <a href="{{ path('account_reset_password') }}">Modifier mon mot de passe</a>
             </li>
+
+            {% if is_granted('ROLE_ADMIN') %}
+                <li>
+                    <a href="{{ path('scooter') }}">Administration</a>
+                </li>
+            {% endif %}
         {% else %}
             <li>
                 <a href="{{ path('security_connexion') }}">Connexion</a>

@@ -6,12 +6,12 @@
  * Time: 19:17
  */
 
-namespace App\form;
+namespace App\Form;
 
 
 use App\Entity\Scooter;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -27,7 +27,16 @@ class ScooterFormType extends AbstractType
                 'label'=>"Scooter name"
             ])
             ->add('scooter_model',TextType::class,[
+                'required'=>true,
                 'label'=>'scooter model'
+            ])
+            ->add('id_offer',ChoiceType::class,[
+                'required'=>true,
+                'choices'=>[
+                    'Offre 1'=> 0,
+                    'Offre 2'=> 1,
+                    'Offre 3'=> 2
+                ]
             ]);
     }
     public function configureOptions(OptionsResolver $resolver)

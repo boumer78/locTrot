@@ -19,6 +19,42 @@ class ScooterRepository extends ServiceEntityRepository
         parent::__construct($registry, Scooter::class);
     }
 
+    public function findFirstOffer()
+    {
+        return $this->createQueryBuilder('a')
+            ->where('a.id_offer = 0')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+    public function findSecondOffer()
+    {
+        return $this->createQueryBuilder('a')
+            ->where('a.id_offer = 1')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+    public function findThirdOffer()
+    {
+        return $this->createQueryBuilder('a')
+            ->where('a.id_offer = 2')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function findLastScooter()
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.idscooter', 'DESC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+
     // /**
     //  * @return Scooter[] Returns an array of Scooter objects
     //  */

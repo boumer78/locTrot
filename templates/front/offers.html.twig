@@ -1,12 +1,10 @@
 {% extends "layout.html.twig" %}
 
 
-{% block body %}
+{% block content %}
 
     <!-- Header -->
-    <section id="offerheader" style="background: #07090c ; height: 10em">
-    </section>
-
+    {% include 'component/_navbar.html.twig' %}
     <!-- The 3 offers -->
         <div class="container">
             <div>
@@ -36,14 +34,24 @@
                 </div>
                 {% endfor %}
             </div>
+            <br><br>
 
             <div>
-                <h2>
-                    <a href="#">Personnaliser mon offre</a>
+                <h2 class="text-center">
+                    Personnaliser mon offre
                 </h2>
             </div>
-
+            <div id="personalizeOffer" class="form-group">
+                <form action="{{ path('offers_page') }}" method="post">
+                    {{ form(form) }}
+                </form>
+            </div>
         </div>
+    {% include 'component/_footer.html.twig' %}
+
+
 {% endblock %}
+
+
 
 

@@ -1,0 +1,58 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+    {{ dump(personnalize) }}
+    {{ dump(offer) }}#}
+
+    <!-- Header -->
+
+    <!-- Content -->
+    {% include 'component/_navbar.html.twig' %}
+    <div>
+        <h2 class="text-center ">Validez votre commande</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" >
+                <div>
+                    <h2>{{ offer.offerName }}</h2>
+                </div>
+                <div>
+                    <img src="{{ asset('images/product/' ~ offer.pictures) }}" alt="">
+                </div>
+                <div>
+                    <p class="text-justify">{{ offer.description }}</p>
+                </div>
+            </div>
+            <div class="offset-2 col-md-6">
+                <div>
+                    <h2>Récapitulatif de votre commande</h2>
+                </div>
+                <br>
+                <div>
+                    <h3>Le durée de location</h3>
+                    <span>{{ personnalize.location_duration }}</span>
+                </div>
+                <br>
+                <div>
+                    <h3>Vos options</h3>
+                   <ul>
+                       {% for key, options in personnalize.options  %}
+                           <li>{{ key }}</li>
+                       {% endfor %}
+                   </ul>
+                </div>
+                <br>
+                <div>
+                    <h3>Votre tarif personnalisé</h3>
+                    <span>{{  personnalize.total }}€/mois</span>
+                </div>
+                <div class="text-right">
+                    <input type="submit" class="btn btn-primary" value="Valider mon offre">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'component/_footer.html.twig' %}
+{% endblock %}

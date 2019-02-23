@@ -37,6 +37,14 @@ class Scooter
     private $scooter_model;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="id_offer", type="integer", nullable=false)
+     */
+
+    private $id_offer;
+
+    /**
      * @var \DateTime|null
      *
      * @ORM\Column(name="scooter_date_entry", type="date", nullable=true)
@@ -147,9 +155,6 @@ class Scooter
         $this->idscooter = $idscooter;
     }
 
-
-
-
     /**
      * @return string|null
      */
@@ -164,6 +169,22 @@ class Scooter
     public function setScooterModel(?string $scooter_model): void
     {
         $this->scooter_model = $scooter_model;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdOffer()
+    {
+        return $this->id_offer;
+    }
+
+    /**
+     * @param mixed $id_offer
+     */
+    public function setIdOffer($id_offer): void
+    {
+        $this->id_offer = $id_offer;
     }
 
 
