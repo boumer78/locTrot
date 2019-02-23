@@ -1,7 +1,7 @@
 {% extends 'back/backHome.html.twig' %}
 
 {% block body %}
-<div >
+<div class=container-fluid">
         <h3 style="text-align:center;">Gestion des Trotinettes</h3>
         <div class="row">
             <div class="col offset-5">
@@ -193,7 +193,6 @@
         $form = $(e.target);
         $modal = $('#exampleModal');
 
-        var title = $('name').val();
 
         var $submitButton = $form.find(':submit');
         $submitButton.html('<i class="fas fa-spinner fa-pulse"></i>');

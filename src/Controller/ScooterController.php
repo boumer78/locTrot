@@ -97,6 +97,9 @@ class ScooterController extends AbstractController
 
     /**
      * @Route("/scooter/new", name="scooter_new", condition="request.isXmlHttpRequest()")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\JsonResponse|Response
+     * @throws \Exception
      */
     public function newScooter(Request $request)
     {
@@ -114,6 +117,7 @@ class ScooterController extends AbstractController
 
 
             $em = $this->getDoctrine()->getManager();
+            $em->persist($scooter);
             $em->flush();
             return $this->json([
                 'envoie'=>'ok',
@@ -149,7 +153,7 @@ class ScooterController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
         $em->remove($scooter);
-//        $em->flush();
+        $em->flush();
 
         return $this->json(['delete'=>'ok','id'=>$request->get('idScooter')]);
     }

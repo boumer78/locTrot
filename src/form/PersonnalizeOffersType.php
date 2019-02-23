@@ -6,7 +6,7 @@
  * Time: 15:23
  */
 
-namespace App\form;
+namespace App\Form;
 
 
 use App\Entity\Offers;
