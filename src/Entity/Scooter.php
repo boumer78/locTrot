@@ -147,9 +147,6 @@ class Scooter
         $this->idscooter = $idscooter;
     }
 
-
-
-
     /**
      * @return string|null
      */

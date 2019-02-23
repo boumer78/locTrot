@@ -47,4 +47,15 @@ class OffersRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    /*public function findPrice(Offers $offers)
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.idOffer= :idOffer')
+            ->setParameter('val', $value)
+            ->orderBy('o.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+    }*/
+
 }
