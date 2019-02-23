@@ -6,7 +6,7 @@
  * Time: 19:17
  */
 
-namespace App\form;
+namespace App\Form;
 
 
 use App\Entity\Scooter;

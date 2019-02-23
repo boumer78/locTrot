@@ -10,7 +10,7 @@ namespace App\Controller;
 
 
 use App\Entity\Scooter;
-use App\form\ScooterFormType;
+use App\Form\ScooterFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -100,7 +100,7 @@ class ScooterController extends AbstractController
      */
     public function newScooter(Request $request)
     {
-        
+
         $scooter = new Scooter();
 
 
@@ -113,10 +113,17 @@ class ScooterController extends AbstractController
         if($form->isSubmitted() && $form->isValid()) {
 
 
-            # Sauvegarde en BDD
             $em = $this->getDoctrine()->getManager();
             $em->flush();
-            return new Response('success');
+            return $this->json([
+                'envoie'=>'ok',
+                'id'=>$scooter->getIdscooter(),
+                'name'=>$scooter->getScooterName(),
+                'model'=>$scooter->getScooterModel(),
+                'serialNumber'=>'50805',
+                'date'=>$scooter->getScooterDateEntry(),
+                'idoffer'=>$scooter->getIdOffer()
+            ]);
 
 
         }
@@ -142,7 +149,7 @@ class ScooterController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
         $em->remove($scooter);
-        $em->flush();
+//        $em->flush();
 
         return $this->json(['delete'=>'ok','id'=>$request->get('idScooter')]);
     }
