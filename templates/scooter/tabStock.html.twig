@@ -1,0 +1,16 @@
+
+
+
+    {% for scooter in scooter %}
+        <tr>
+            <td>{{ scooter.idscooter }} - {{ scooter.idOffer }} </td>
+            <td>{{ scooter.scooterName }} </td>
+            <td>{{ scooter.scooterModel }} </td>
+            <td>05646514</td>
+            <td>{{ scooter.scooterDateEntry|date('d-m-Y') }}</td>
+            <td><i class="fas fa-trash-alt"></i></td>
+
+        </tr>
+    {% endfor %}
+
+

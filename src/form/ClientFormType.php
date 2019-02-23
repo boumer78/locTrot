@@ -6,7 +6,7 @@
  * Time: 14:41
  */
 
-namespace App\form;
+namespace App\Form;
 
 
 use App\Entity\Clients;
