@@ -10,6 +10,7 @@ namespace App\Controller;
 
 
 use App\Entity\Offers;
+use App\Entity\Order;
 use App\Form\PersonnalizeOffersType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
