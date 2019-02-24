@@ -66,20 +66,12 @@ class Clients implements UserInterface
     /**
      * @ORM\Column(type="array")
      */
-
     private $roles = [];
-    /**
-     * A non-persisted field that's used to create the encoded password.
-     *
-     * @var string
-     */
-    private $plainPassword;
+
     /**
      *
      * @throws \Exception
      */
-
-
     public function construct()
     {
         $this->registerDate = new \DateTime();
@@ -217,22 +209,6 @@ class Clients implements UserInterface
 
     public function eraseCredentials()
     {
-    }
-
-    /**
-     * @return string
-     */
-    public function getPlainPassword(): ?string
-    {
-        return $this->plainPassword;
-    }
-
-    /**
-     * @param string $plainPassword
-     */
-    public function setPlainPassword(string $plainPassword): void
-    {
-        $this->plainPassword = $plainPassword;
     }
 
 
