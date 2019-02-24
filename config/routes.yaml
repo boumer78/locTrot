@@ -1,3 +1,7 @@
 #index:
 #   path: /
 #   controller: App\Controller\defaultController::index
+
+account_reset_password:
+  path: /account/reset-password
+  controller: App\Controller\AccountController::resetPassword
