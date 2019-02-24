@@ -1,0 +1,70 @@
+{% extends 'back/backHome.html.twig' %}
+{% block body %}
+
+
+<table id="table" class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Date Inscription</th>
+        <th scope="col">Offre en cour</th>
+    </tr>
+    </thead>
+    <tbody >
+
+    {% for client in client %}
+        <tr>
+            <td>{{ client.idclients }} </td>
+            <td>{{ client.lastname }} </td>
+            <td>{{ client.firstname }} </td>
+            <td>{{client.registerDate|date('d-m-Y') }}</td>
+            <td id="offre-js{{ client.idclients }}">{{ client.currentOffre }} </td>
+        </tr>
+
+
+
+    {% endfor %}
+
+    </tbody>
+</table>
+
+
+
+{% endblock %}
+
+  {% block javascripts %}
+    {{ parent() }}
+    <script>
+        var table= document.getElementById('table');
+        for(let i=1;i < table.rows.length;i++){
+
+            var offre = document.querySelector("#offre-js"+i).innerHTML;
+            console.log(offre);
+            if(offre != 0 ){
+                console.log("ok");
+                $("#offre-js"+i).closest('tr').addClass('colored');
+                $.removeData(offre);
+            }
+            else
+            {
+                console.log('notOK');
+            }
+        }
+
+
+    </script>
+{% endblock %}
+{#<script>#}
+    {#var offre =document.querySelector(".offre-js").innerHTML;#}
+    {#console.log(offre);#}
+    {#$('.offre-js'),function () {#}
+        {#if(offre === '1'){#}
+
+            {#$(this).closest('tr').addClass('colored');#}
+            {#$.removeData(offre);#}
+        {#}#}
+    {#}#}
+
+{#</script>#}

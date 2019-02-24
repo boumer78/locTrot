@@ -59,4 +59,19 @@ class ClientController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    /**
+     * page du backoffice de gestion des cliens
+     * @Route("/gestionClient", name="gestion_client")
+     */
+    public function gestionClient()
+    {
+        $client = $this->getDoctrine()
+            ->getRepository(Clients::class)
+            ->findAll();
+
+        return $this->render('clientBack/clientBack.html.twig',[
+            'client'=>$client
+        ]);
+    }
 }

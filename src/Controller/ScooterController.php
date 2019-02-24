@@ -96,7 +96,7 @@ class ScooterController extends AbstractController
 
 
     /**
-     * @Route("/scooter/new", name="scooter_new", condition="request.isXmlHttpRequest()")
+     * @Route("/scooter/new", name="scooter_new")
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\JsonResponse|Response
      * @throws \Exception
