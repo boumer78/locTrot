@@ -43,14 +43,10 @@
             var offre = document.querySelector("#offre-js"+i).innerHTML;
             console.log(offre);
             if(offre != 0 ){
-                console.log("ok");
                 $("#offre-js"+i).closest('tr').addClass('colored');
                 $.removeData(offre);
             }
-            else
-            {
-                console.log('notOK');
-            }
+
         }
 
 

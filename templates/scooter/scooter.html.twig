@@ -27,9 +27,9 @@
                     <th scope="col">supprimer</th>
                 </tr>
                 </thead>
-                <tbody id="list0">
+                <tbody id="list1">
                 {% for scooter in firstOffer %}
-                    <tr class="scooter-js">
+                    <tr id="scooter-{{ scooter.idscooter }}" class="scooter-js">
                         <td>{{ scooter.idscooter }} </td>
                         <td>{{ scooter.scooterName }} </td>
                         <td>{{ scooter.scooterModel }} </td>
@@ -54,9 +54,9 @@
                 <th scope="col">supprimer</th>
             </tr>
             </thead>
-            <tbody id="list1">
+            <tbody id="list2">
             {% for scooter in secondOffer %}
-                <tr class="scooter-js">
+                <tr id="scooter-{{ scooter.idscooter }}" class="scooter-js">
                     <td>{{ scooter.idscooter }} </td>
                     <td>{{ scooter.scooterName }} </td>
                     <td>{{ scooter.scooterModel }} </td>
@@ -82,9 +82,9 @@
                 <th scope="col">supprimer</th>
             </tr>
             </thead>
-            <tbody id="list2">
+            <tbody id="list3">
             {% for scooter in thirdOffer %}
-                <tr class="scooter-js">
+                <tr id="scooter-{{ scooter.idscooter }}" class="scooter-js">
                     <td>{{ scooter.idscooter }} </td>
                     <td>{{ scooter.scooterName }} </td>
                     <td>{{ scooter.scooterModel }} </td>
@@ -165,22 +165,12 @@
 
         $.ajax({
             type: 'POST',
-            url: '/scooter/delete/' + idScooter,
+            url: '/admin/scooter/delete/' + idScooter,
             data: {idScooter: idScooter},
             dataType: 'JSON',
         })
             .done((data) => {
-                console.log(data);
-
-
-                    $('.btn-js').on('click',function(){
-                        let element = $(this).closest('tr');
-                        console.log(element);
-                        element.remove();
-
-
-                });
-
+                $("#scooter-"+idScooter).remove();
             });
     };
 
@@ -203,7 +193,21 @@
                     $("#exampleModal").modal('toggle');  // Ne fonctionne absolument pas
                    // $(".modal-backdrop").removeClass('show');
                     $(".modal-backdrop").remove();
-                    $('#list'+data['idoffer']).append('<tr><td> a </td><td> '+ data['name'] +' </td><td>'+ data['model'] +' </td><td>'+ data['SerialNumber'] +' </td><td>Today</td></tr>');
+                    {#$('#list'+data['idoffer']).append('<tr><td>'+data['id']+' </td><td> '+ data['name'] +' </td><td>'+ data['model'] +' </td><td>'+ data['SerialNumber'] +' </td><td>Today</td><td><a class="btn-js" href="javascript:void(0)" onclick="deleteScooter({{ scooter.idscooter }});"><i class="fas fa-trash-alt"></i></a></td></tr>');#}
+                    $('#list'+data['idoffer']).append(`
+                        <tr id="scooter-${data['id']}">
+                            <td>${data['id']}</td>
+                            <td>${data['name']}</td>
+                            <td>${data['model']}</td>
+                            <td>${data['SerialNumber']}</td>
+                            <td>Today</td>
+                            <td>
+                                <a class="btn-js" href="javascript:void(0)" onclick="deleteScooter(${data['id']});">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    `);
 
                 } else {
                     $modal.find('.modal-body').html(data);
