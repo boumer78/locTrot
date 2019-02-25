@@ -1,6 +1,7 @@
 
 {%  extends 'layout.html.twig' %}
 
+
 {% block title %}
     Formulaire de contact
 {% endblock %}
@@ -17,23 +18,16 @@
 {% endblock %}
 
 {% block content %}
-
 {% block body %}
-    <header class="head-color">
-    </header>
-    <div class="container">
-    <div class="row">
-    <div class="major narrow col-lg-offset-3">
+    <header class="major narrow">
         <h2>FORMULAIRE DE CONTACT</h2>
         <p>Une question? Contactez-nous!</p>
-    </div>
-    </div>
-    </div>
+    </header>
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
                 <h2 class=page-header>Contactez-nous</h2>
-
+                *
                 {{form_start(form)}}
                 {{form_widget(form)}}
                 {{form_end(form)}}

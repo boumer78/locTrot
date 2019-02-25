@@ -53,10 +53,7 @@ class ClientFormType extends AbstractType
                     'placeholder' => " Votre mot de passe"
                 ]
             ])
-            ->add('Envoyer', SubmitType::class, [
-            'label' => 'Connexion',
-                'attr' => array('class' => 'btn btn-dark')
-            ]);
+            ->add('Envoyer', SubmitType::class);
 
     }
     public function getBlockPrefix()

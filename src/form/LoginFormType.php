@@ -37,12 +37,10 @@ class LoginFormType extends AbstractType
                 'label'=>false,
                 'attr' =>[
                     'placeholder' => " Mot de passe."
-
                 ]
             ])
             ->add('Connexion', SubmitType::class, [
-                'label' => 'Connexion',
-                'attr' => array('class' => 'btn btn-dark')
+                'label' => 'Connexion'
             ]);
     }
 

@@ -17,11 +17,10 @@
 {% endblock %}
 
 {% block content %}
-    <header class="head-color">
-    </header>
+
     <div class="row">
         <div class="col-md-8 col-sm-12">
-            <br><h3>Connectez-Vous</h3>
+            <h3>Connectez-Vous</h3>
             {% if error %}
                 <div class="alert alert-danger">
                     {{ error.messageKey|trans(error.messageData, 'security') }}
