@@ -3,19 +3,27 @@
 <section id="one">
 <body class="landing">
 <header id="header" class="alt">
-    <h1><a href="{{ path('home_page') }}" class="logo">Loc Ta Trott'</a></h1>
+    <h1><a href="{{ path('home_page') }}">LocTaTrott'</a></h1>
     <a href="#nav">Menu</a>
 </header>
 </section>
+
 <!-- Nav -->
 
 <nav id="nav">
     <ul class="links">
 
-        <li><a href="home">Accueil</a></li>
+        <li><a href="/">LocTaTrott'</a></li>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <li>
-                <a href="{{ path('security_deconnexion') }}">Deconnexion</a>
+                <a href="{{ path('security_deconnexion') }}" style="color: red">Deconnexion</a>
+
+            </li>
+            <li>
+                <a href="{{ path('account_reset_password') }}">Modifier mon mot de passe</a>
+            </li>
+            <li>
+                <a href="{{ path('account_delete') }}">Supprimer mon compte</a>
             </li>
             {% if is_granted('ROLE_ADMIN') %}
                 <li>
@@ -24,15 +32,14 @@
             {% endif %}
         {% else %}
             <li>
-                <a href="{{ path('security_connexion') }}">Connexion</a>
+                <a href="{{ path('security_connexion') }}" style="color: #51BAA4;">Connexion</a>
             </li>
             <li>
                 <a href="{{ path('new_clients') }}">Inscription</a>
             </li>
 
         {% endif %}
-        <li><a href="">Gestion Profil</a></li>
-        <li><a href="/offers">Nos offres</a></li>
         <li><a href="{{ 'contact' }}">Contact</a> </li>
+
     </ul>
 </nav>

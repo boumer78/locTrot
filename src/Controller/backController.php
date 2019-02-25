@@ -10,12 +10,15 @@ namespace App\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+
 use Symfony\Component\Routing\Annotation\Route;
 
 class backController extends AbstractController
 {
     /**
      * @Route("/admin", name="back_office")
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function index()
     {

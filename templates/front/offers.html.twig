@@ -4,11 +4,10 @@
 {% block content %}
 
     <!-- Header -->
-    <header class="head-color">
-    </header>
+    {% include 'component/_navbar.html.twig' %}
     <!-- The 3 offers -->
         <div class="container">
-            <div class="choice">
+            <div>
                 <h2 class="my-3">Choisissez votre offre</h2>
             </div>
             <div class="row">
@@ -22,17 +21,12 @@
                         </div>
                         <h3 class="text-center mt-3">{{ offers.offername }}</h3>
                         <div class="card-body">
-                            <div class="description-offers">
+                            <div style="height: 300px">
                                 <p class="card-text">{{ offers.description }}</p>
+                                <p class="card-text">{{ offers.options }}</p>
                             </div>
-                            <div class="options-offers">
-                                <p class="car-text">{{ offers.options }}</p>
-                            </div>
-                            <div class="price-offers">
-                                <a href="#" class="button big alt" >{{ offers.price }}</a>
-                            </div>
-                            <div class="time-loc-classic">
-                                <p>Location de 3 mois</p>
+                            <div>
+                                <a href="#" class="button big alt">{{ offers.price }}</a>
                             </div>
                             <br><br>
                         </div>
@@ -40,7 +34,8 @@
                 </div>
                 {% endfor %}
             </div>
-            <br>
+            <br><br>
+
             <div>
                 <h2 class="text-center">
                     Personnaliser mon offre
@@ -50,6 +45,9 @@
                 {{ form(form) }}
             </div>
         </div>
+    {% include 'component/_footer.html.twig' %}
+
+
 {% endblock %}
 
 
