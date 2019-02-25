@@ -21,7 +21,7 @@ class ScooterController extends AbstractController
 {
 
     /**
-     * @Route("/scooter", name="scooter")
+     * @Route("/admin/scooter", name="scooter")
      */
     public function scooterIndex()
     {
@@ -96,7 +96,7 @@ class ScooterController extends AbstractController
 
 
     /**
-     * @Route("/scooter/new", name="scooter_new", condition="request.isXmlHttpRequest()")
+     * @Route("/admin/scooter/new", name="scooter_new", condition="request.isXmlHttpRequest()")
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\JsonResponse|Response
      * @throws \Exception
@@ -140,7 +140,7 @@ class ScooterController extends AbstractController
     }
 
     /**
-     * @Route("/scooter/delete/{id}", name="scooter_delete")
+     * @Route("/admin/scooter/delete/{id}", name="scooter_delete")
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
@@ -157,4 +157,5 @@ class ScooterController extends AbstractController
 
         return $this->json(['delete'=>'ok','id'=>$request->get('idScooter')]);
     }
+
 }
