@@ -53,7 +53,8 @@ class PersonnalizeOffersType extends AbstractType
                 'multiple' => true
             ])
         ->add('calculer',SubmitType::class,[
-            'label' => 'Cliquez ici pour connaître le tarif'
+            'label' => 'Cliquez ici pour connaître le tarif',
+            'attr'=>array('class' => 'btn btn-success')
         ]);
     }
 

@@ -1,18 +1,18 @@
 <!-- Header -->
 
-<section id="one" class="wrapper style2"></section>
+<section id="one">
 <body class="landing">
 <header id="header" class="alt">
-    <h1><a href="{{ path('home_page') }}">LocTaTrott'</a></h1>
+    <h1><a href="{{ path('home_page') }}" class="logo">Loc Ta Trott'</a></h1>
     <a href="#nav">Menu</a>
 </header>
-
+</section>
 <!-- Nav -->
 
 <nav id="nav">
     <ul class="links">
 
-        <li><a href="home">LocTaTrott'</a></li>
+        <li><a href="home">Accueil</a></li>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <li>
                 <a href="{{ path('security_deconnexion') }}">Deconnexion</a>
@@ -31,7 +31,8 @@
             </li>
 
         {% endif %}
-        <li><a href="{{ 'contact' }}">Contact</a> </li>
         <li><a href="">Gestion Profil</a></li>
+        <li><a href="/offers">Nos offres</a></li>
+        <li><a href="{{ 'contact' }}">Contact</a> </li>
     </ul>
 </nav>

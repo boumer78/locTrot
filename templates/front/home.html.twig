@@ -6,162 +6,78 @@
 
     <section id="banner">
         <i class="icon fa-diamond"></i>
-        <h2>LocTaTrott'</h2>
-        <p>Trop de circulation sur la route? Marre d'attendre le métro? Louez votre trottinette éléctrique avec LocTaTrot'</p>
+        <h2 class="logo">Loc Ta Trott'</h2>
+        <p>Trop de circulation sur la route? Marre d'attendre le métro? Louez votre trottinette éléctrique avec LocTaTrott'</p>
         <ul class="actions">
             <li><a href="/offers" class="button big special">Louez votre Trottinette</a></li>
         </ul>
     </section>
 
-    <!-- One -->
-    <section id="one" class="wrapper style1">
-
-        <div class="col-md-4 col-sm-12 col-lg-offset-4">
-
-            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-
-                <h3 class="text-center">
-                    Bonjour {{ app.user.firstname }}
-                </h3>
-
-                <h4 class="text-center">
-
-                    {% if is_granted('ROLE_ADMIN') %}
-                       Vous êtes un Administrateur
-                    {% else %}
-                        Vous êtes un Client
-                    {% endif %}
-                </h4>
-                        <a href="{{ path('security_deconnexion') }}">
-                            Déconnexion
-                        </a>
-
-
-
-            {% endif %}
-        </div>
-        <div class="inner">
-            <article class="feature left">
-                <span class="image"><img src="images/pic01.jpg" alt="" /></span>
-                <div class="content">
-                    <h2>FORFAIT SILVER</h2>
-                    <h3>PRIX €</h3>
-                    <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing</p>
-                    <ul class="actions">
-                        <li>
-                            <a href="#" class="button alt">Profitez de cette offre !</a>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-            <article class="feature right">
-                <span class="image"><img src="images/pic02.jpg" alt="" /></span>
-                <div class="content">
-                    <h2>FORFAIT GOLD</h2>
-                    <h3>PRIX €</h3>
-
-                    <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
-                    <ul class="actions">
-                        <li>
-                            <a href="#" class="button alt">Profitez de cette offre !</a>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-            <article class="feature left">
-                <span class="image"><img src="images/pic03.jpg" alt="" /></span>
-                <div class="content">
-                    <h2>FORFAIT PLATINIUM</h2>
-                    <h3>PRIX €</h3>
-                    <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
-                    <ul class="actions">
-                        <li>
-                            <a href="#" class="button alt">Profitez de cette offre !</a>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- Two -->
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active col-lg-8 offset-2">
-                    <img src="images/trot.jpg" class="d-block w-100" alt="...">
-                        <div class="inner">
-                            <article class="feature left">
-                                <div class="carousel-item col-lg-8 offset-2">
-                                    <img src="images/trot1.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item col-lg-8 offset-2">
-                                    <img src="images/trot2.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </article>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
     <!-- two -->
-
     <section class="wrapper special">
         <div class="row">
             <div class="col-md-12">
                 <h2 class="text-center">
                     Louer une trottinette selon vos besoins !
                 </h2>
-            </div><br><br><br>
+            </div><br>
         </div>
-        <div class="row">
-            <div class="col-md-4" style="height: 200px">
-                <img src="images/product/b1.jpg"
-                     alt="card-img"
-                     style="width: 50%; height: 100%">
-            </div>
-            <div class="col-md-4"  style="height: 250px">
-                <img src="images/product/b2.jpg"
-                     alt="card-img"
-                     style="width: 60%; height: 100%">
-            </div>
-            <div class="col-md-4"  style="height: 200px">
-                <img src="images/product/b3.jpg"
-                     alt="card-img"
-                     style="width: 50%; height: 100%">
-            </div>
-        </div>
-        <br><br>
-        <div class="row">
-            <div class="col-md-4">
-                <h4>Votre choix de Trottinette</h4>
-                <p>Choisissez votre modèle de trottinettes,
-                    <strong>SILVER</strong>, 
-                    <strong>GOLD</strong> ou
-                    <strong>PLATINIUM</strong>
-                </p>
-            </div>
-            <div class="col-md-4">
-                <h4>Pour combien de temps ?</h4>
-                <p>Partez sur <strong>3 mois de location</strong> en formule classique ou <strong>personnalisez votre offre</strong> en réduisant
-                    ou en augmentant la durée de location </p>
-            </div>
-            <div class="col-md-4">
-                <h4>Economisez du temps et de l'argent !</h4>
-                <p>Vous n'aurez plus à attendre le train , le métro ou le bus, déplacez vous plus facilement...
-                    Faites des <strong>économies</strong> en ne dépensant pas une fortune pour obtenir
-                    une trottinette électrique de grande qualité !
-                    On s'occupe de tout! Vous n'aurez qu'à payer un forfait chaque mois !
-                </p>
+        <div class="container">
+            <div class="row">
+                <div class="card-deck">
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-card">
+                            <img class="card-img-top" src="images/product/b1.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <div class="titre-card">
+                                <h4>Votre choix de Trottinette</h4>
+                            </div>
+                            <div class="p-card">
+                                <p class="card-text">
+                                Choisissez votre modèle de trottinettes,
+                                    <strong>SILVER</strong>,
+                                    <strong>GOLD</strong> ou
+                                    <strong>PLATINIUM</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-card">
+                            <img class="card-img-top" src="images/product/b2.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <div class="titre-card">
+                                <h4>Pour combien de temps ?</h4>
+                            </div>
+                            <div class="p-card">
+                                <p class="card-text">Partez sur
+                                    <strong>3 mois de location</strong> en formule classique ou
+                                    <strong>personnalisez votre offre</strong> en réduisant
+                                    ou en augmentant la durée de location
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-card">
+                            <img class="card-img-top" src="images/product/b3.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <div class="titre-card">
+                                <h4>Economisez du temps et de l'argent !</h4>
+                            </div>
+                            <div class="p-card">
+                                <p class="card-text">Vous n'aurez plus à attendre le train , le métro ou le bus, déplacez vous plus facilement...
+                                Faites des <strong>économies</strong> en ne dépensant pas une fortune pour obtenir
+                                une trottinette électrique de grande qualité !
+                                On s'occupe de tout! Vous n'aurez qu'à payer un forfait chaque mois !
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -173,19 +89,12 @@
             <header class="major narrow">
                 <h2>Laissez vous séduire et bénéficiez de points de fidélité. </h2>
             </header>
-            <iframe width="80%" height="315" src="https://www.youtube.com/embed/stkiGHbZ64M"
+            <iframe width="80%" height="315"
+                    src="https://www.youtube.com/embed/qu3DKYWOQ9M"
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
             </iframe>
         </div>
     </section>
-
-    <!-- Four -->
-    <section id="four" class="wrapper style2 special">
-        <div class="inner">
-
-        </div>
-    </section>
-
     </body>
 {% endblock %}
