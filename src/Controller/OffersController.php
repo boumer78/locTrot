@@ -69,8 +69,6 @@ class OffersController extends AbstractController
 
 
 
-
-
         //Gestion affichage des 3 offres
 
         $offers = $this->getDoctrine()
@@ -78,11 +76,12 @@ class OffersController extends AbstractController
             ->findAll();
 
 
-        return $this->render("front/offers.html.twig" , array('offers'=>$offers));
+        #return $this->render("front/offers.html.twig" , array('offers'=>$offers));
 
         //Gestion du formulaire de personnalisation de mon offre
         $form = $this->createForm(PersonnalizeOffersType::class)
             ->handleRequest($request);
+
 
         if($form->isSubmitted() && $form->isValid()) {
 
