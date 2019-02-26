@@ -170,7 +170,7 @@ class OffersController extends AbstractController
 
         $offer = $session->get('personnalize');
 
-       dump($offer);
+       #dump($offer);
        #die();
 
         $em = $this->getDoctrine()->getManager();
