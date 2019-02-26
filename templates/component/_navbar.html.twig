@@ -13,7 +13,9 @@
 <nav id="nav">
     <ul class="links">
 
+
         <li><a href="/">LocTaTrott'</a></li>
+        <li><a href="{{ path('home_page') }}">Accueil</a></li>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <li>
                 <a href="{{ path('security_deconnexion') }}" style="color: red">Deconnexion</a>

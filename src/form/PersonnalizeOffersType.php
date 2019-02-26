@@ -44,8 +44,8 @@ class PersonnalizeOffersType extends AbstractType
             ->add('options', ChoiceType::class,[
                 'label' => 'Sélectionner vos options',
                 'choices' => [
-                    'Assurances vol' => '3#Assurances vol',
-                    'Assurance casse'=> '3#Assurances casse',
+                    'Assurance vol' => '3#Assurance vol',
+                    'Assurance casse'=> '3#Assurance casse',
                     'Maintenance' => '5#Maintenance',
                     'Intervention sous 24H ou remplacement du produit' => '5#Intervention sous 24H ou remplacement du produit'
                 ],

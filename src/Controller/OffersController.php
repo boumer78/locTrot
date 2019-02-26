@@ -10,7 +10,7 @@ namespace App\Controller;
 
 
 use App\Entity\Offers;
-use App\Entity\Order;
+use App\Entity\Command;
 use App\Form\PersonnalizeOffersType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -150,6 +150,8 @@ class OffersController extends AbstractController
                 'offer_name' => $personnalize['trottinettes_name']
             ]);
 
+
+
         #dump($offer);
         #die('aaa');
 
@@ -158,6 +160,31 @@ class OffersController extends AbstractController
             'offer' => $offer
         ]);
 
+    }
+
+    /**
+     * @Route("/offers/confirmation/validation", name="offers_validation")
+     */
+    public function orderValidation(SessionInterface $session)
+    {
+
+        $offer = $session->get('personnalize');
+
+       dump($offer);
+       #die();
+
+        $em = $this->getDoctrine()->getManager();
+
+        $command = new Command();
+        $command->setOffer($offer['trottinettes_name']);
+        #$command->setOptions($offer['options']);
+        $command->setPrice($offer['total']);
+
+        $em->persist($command);
+        $em->flush();
+
+
+        return $this->render("component/validation.html.twig");
     }
 
 }
