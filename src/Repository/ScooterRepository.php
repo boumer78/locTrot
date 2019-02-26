@@ -22,7 +22,7 @@ class ScooterRepository extends ServiceEntityRepository
     public function findFirstOffer()
     {
         return $this->createQueryBuilder('a')
-            ->where('a.id_offer = 0')
+            ->where('a.id_offer = 1')
             ->getQuery()
             ->getResult()
             ;
@@ -30,7 +30,7 @@ class ScooterRepository extends ServiceEntityRepository
     public function findSecondOffer()
     {
         return $this->createQueryBuilder('a')
-            ->where('a.id_offer = 1')
+            ->where('a.id_offer = 2')
             ->getQuery()
             ->getResult()
             ;
@@ -38,7 +38,7 @@ class ScooterRepository extends ServiceEntityRepository
     public function findThirdOffer()
     {
         return $this->createQueryBuilder('a')
-            ->where('a.id_offer = 2')
+            ->where('a.id_offer = 3')
             ->getQuery()
             ->getResult()
             ;
@@ -54,6 +54,14 @@ class ScooterRepository extends ServiceEntityRepository
             ;
     }
 
+
+    public function countScooter()
+    {
+        return $this->createQueryBuilder('s')
+            ->select('count(s)')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
 
     // /**
     //  * @return Scooter[] Returns an array of Scooter objects

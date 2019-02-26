@@ -33,9 +33,9 @@ class ScooterFormType extends AbstractType
             ->add('id_offer',ChoiceType::class,[
                 'required'=>true,
                 'choices'=>[
-                    'Offre 1'=> 0,
-                    'Offre 2'=> 1,
-                    'Offre 3'=> 2
+                    'Offre 1'=> 1,
+                    'Offre 2'=> 2,
+                    'Offre 3'=> 3
                 ]
             ]);
     }

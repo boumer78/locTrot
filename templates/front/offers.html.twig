@@ -9,6 +9,8 @@
         <div class="container">
             <div>
                 <h2 class="my-3">Choisissez votre offre</h2>
+            <div class="choice">
+                <h2 class="my-3" style="background-color: #F9F8F7;">Nos offres</h2>
             </div>
             <div class="row">
                 {% for offers in offers %}
@@ -27,6 +29,14 @@
                             </div>
                             <div>
                                 <a href="#" class="button big alt">{{ offers.price }}</a>
+                            <div class="options-offers">
+                                <p class="car-text">{{ offers.options }}</p>
+                            </div>
+                            <div class="price-offers">
+                                <span class="button big alt" >{{ offers.price }}</span>
+                            </div>
+                            <div class="time-loc-classic">
+                                <p>Location pendant 3 mois</p>
                             </div>
                             <br><br>
                         </div>
@@ -36,9 +46,10 @@
             </div>
             <br><br>
 
+            <br><br><br><br>
             <div>
-                <h2 class="text-center">
-                    Personnaliser mon offre
+                <h2 class="text-center" style="background-color: #F9F8F7;">
+                    Selectionnez votre offre
                 </h2>
             </div>
             <div id="personalizeOffer" class="form-group">

@@ -2,26 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Clients;
+use App\Entity\Command;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * @method Clients|null find($id, $lockMode = null, $lockVersion = null)
- * @method Clients|null findOneBy(array $criteria, array $orderBy = null)
- * @method Clients[]    findAll()
- * @method Clients[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Command|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Command|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Command[]    findAll()
+ * @method Command[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ClientsRepository extends ServiceEntityRepository
+class CommandRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, Clients::class);
+        parent::__construct($registry, Command::class);
     }
-    
 
     // /**
-    //  * @return Clients[] Returns an array of Clients objects
+    //  * @return Command[] Returns an array of Command objects
     //  */
     /*
     public function findByExampleField($value)
@@ -38,7 +37,7 @@ class ClientsRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Clients
+    public function findOneBySomeField($value): ?Command
     {
         return $this->createQueryBuilder('c')
             ->andWhere('c.exampleField = :val')
