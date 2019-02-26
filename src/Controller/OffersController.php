@@ -170,14 +170,14 @@ class OffersController extends AbstractController
 
         $offer = $session->get('personnalize');
 
-       dump($offer);
+       #dump($offer);
        #die();
 
         $em = $this->getDoctrine()->getManager();
 
         $command = new Command();
         $command->setOffer($offer['trottinettes_name']);
-        #$command->setOptions($offer['options']);
+        $command->setOptions(serialize($offer['options']));
         $command->setPrice($offer['total']);
 
         $em->persist($command);
