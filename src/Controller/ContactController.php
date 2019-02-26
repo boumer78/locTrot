@@ -3,6 +3,7 @@ namespace App\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -22,9 +23,9 @@ use App\Entity\Contact;
         {
             $contact = new Contact;
             $form = $this->createFormBuilder($contact)
-                ->add('name', TextType::class, array('label' => 'name', 'attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
-                ->add('email', TextType::class, array('label' => 'email', 'attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
-                ->add('message', TextareaType::class, array('label' => 'message', 'attr' => array('class' => 'form-control')))
+                ->add('name', TextType::class, array('required'=>true,'label' => 'name', 'attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
+                ->add('email', EmailType::class, array('required'=>true,'label' => 'email', 'attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
+                ->add('message', TextareaType::class, array('required'=>true,'label' => 'message', 'attr' => array('class' => 'form-control')))
                 ->add('Save', SubmitType::class, array('label' => 'submit', 'attr' => array('class' => 'btn btn-dark', 'style' => 'margin-top:15px')))
                 ->getForm();
             # Handle form response

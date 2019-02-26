@@ -79,7 +79,7 @@ class Clients implements UserInterface
      *
      * @throws \Exception
      */
-    public function construct()
+    public function __construct()
     {
         $this->registerDate = new \DateTime();
     }
@@ -142,20 +142,16 @@ class Clients implements UserInterface
         $this->currentOffre = $currentOffre;
     }
 
-    /**
-     * @return \DateTime|null
-     */
-    public function getRegisterDate(): ?\DateTimeInterface
+    public function getRegisterDate()
     {
         return $this->registerDate;
     }
 
-    /**
-     * @param \DateTimeInterface|null $registerDate
-     */
-    public function setRegisterDate(?\DateTimeInterface $registerDate): void
+    public function setRegisterDate($registerDate): self
     {
         $this->registerDate = $registerDate;
+
+        return $this;
     }
 
     /**
