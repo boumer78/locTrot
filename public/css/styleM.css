@@ -1,9 +1,4 @@
 /* home */
-.logo
-{
-    font-family : "Marker felt";
-
-}
 .card
 {
     height: 700px;
@@ -63,5 +58,19 @@
     padding-bottom: 10px;
 }
 
+.btn-validation {
+    background-color: #25383B;
+    box-shadow: none;
+    color: #fff !important;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 30px;
+}
 
+.msg-validation
+{
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
 /* footer */
