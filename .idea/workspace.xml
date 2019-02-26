@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="caa4a9d8-13e4-4b44-9122-2749f56c5889" name="Default Changelist" comment="" />
+    <list default="true" id="caa4a9d8-13e4-4b44-9122-2749f56c5889" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/back/backSideBar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/back/backSideBar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/component/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/component/_navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scooter/scooter.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scooter/scooter.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scooter/tabStock.html.twig" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,67 +20,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/ContactController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="24" column="145" selection-end-line="59" selection-end-column="5" />
-              <folding>
-                <element signature="e#32#91#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="44" column="64" selection-end-line="65" selection-end-column="1" />
-              <folding>
-                <element signature="e#120#147#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Clients.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="225" column="5" lean-forward="true" selection-start-line="225" selection-start-column="5" selection-end-line="225" selection-end-column="5" />
-              <folding>
-                <element signature="e#30#78#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Contact.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Offers.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/ClientFormType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="58" selection-end-column="15" />
-              <folding>
-                <element signature="e#115#138#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Form/LoginFormType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="609">
               <caret line="39" selection-end-line="63" selection-end-column="1" />
             </state>
           </provider>
@@ -83,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Form/ResetPasswordType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+            <state relative-caret-position="1008">
+              <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
               <folding>
                 <element signature="e#116#156#0#PHP" expanded="true" />
               </folding>
@@ -95,17 +43,63 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/account/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="399">
               <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/account/resetPassword.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="14" lean-forward="true" selection-end-line="19" selection-end-column="14" />
+            <state relative-caret-position="399">
+              <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/backOffice.html.twig">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/scooter/form.html.twig">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/scooter/scooter.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/component/_navbar.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/back/backSideBar.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/backController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -136,8 +130,6 @@
         <option value="$PROJECT_DIR$/templates/scooter/form.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Scooter.php" />
         <option value="$PROJECT_DIR$/src/Controller/ScooterController.php" />
-        <option value="$PROJECT_DIR$/templates/scooter/scooter.html.twig" />
-        <option value="$PROJECT_DIR$/templates/back/backSideBar.html.twig" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/templates/front/offers.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/PersonnalizeOffersType.php" />
@@ -157,7 +149,6 @@
         <option value="$PROJECT_DIR$/src/Form/ResetPasswordType.php" />
         <option value="$PROJECT_DIR$/templates/account/resetPassword.html.twig" />
         <option value="$PROJECT_DIR$/templates/layout.html.twig" />
-        <option value="$PROJECT_DIR$/templates/component/_navbar.html.twig" />
         <option value="$PROJECT_DIR$/templates/front/home.html.twig" />
         <option value="$PROJECT_DIR$/public/css/styleC.css" />
         <option value="$PROJECT_DIR$/src/Form/LoginFormType.php" />
@@ -166,6 +157,9 @@
         <option value="$PROJECT_DIR$/templates/clientform/connexion.html.twig" />
         <option value="$PROJECT_DIR$/templates/clientform/forminscription.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/ClientFormType.php" />
+        <option value="$PROJECT_DIR$/templates/scooter/scooter.html.twig" />
+        <option value="$PROJECT_DIR$/templates/component/_navbar.html.twig" />
+        <option value="$PROJECT_DIR$/templates/back/backSideBar.html.twig" />
       </list>
     </option>
   </component>
@@ -256,7 +250,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="7" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
@@ -267,122 +261,74 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
+              <item name="locTrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locTrot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
+              <item name="locTrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locTrot" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
+              <item name="locTrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locTrot" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
+              <item name="locTrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locTrot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
+              <item name="locTrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locTrot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
+              <item name="locTrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locTrot" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
+              <item name="locTrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locTrot" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="back" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="clientBack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="clientform" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
+              <item name="locTrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locTrot" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="locTrot-develop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="locTrot-develop" type="462c0819:PsiDirectoryNode" />
+              <item name="locTrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locTrot" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="locTrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locTrot" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="scooter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/loctrot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../loctrot" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -417,17 +363,18 @@
       <workItem from="1550929622338" duration="50000" />
       <workItem from="1551033773719" duration="70000" />
       <workItem from="1551086333051" duration="19592000" />
+      <workItem from="1551170786217" duration="742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27124000" />
+    <option name="totallyTimeSpent" value="27866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49927008" visible="true" weight="0.14765458" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49927008" visible="true" weight="0.14925373" />
       <window_info id="Structure" order="1" sideWeight="0.5007299" side_tool="true" weight="0.22374798" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -483,13 +430,6 @@
     <entry file="file://$PROJECT_DIR$/src/Repository/ScooterRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/scooter/scooter.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ScooterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -504,9 +444,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php" />
     <entry file="file://$PROJECT_DIR$/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -524,13 +462,6 @@
           <folding>
             <element signature="e#118#140#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/back/backSideBar.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
@@ -566,20 +497,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/backOffice.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/component/_navbar.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/component/_footer.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
@@ -656,16 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/backController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <element signature="e#115#180#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ClientController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
@@ -678,7 +585,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ContactController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="273">
           <caret line="24" column="145" selection-end-line="59" selection-end-column="5" />
           <folding>
             <element signature="e#32#91#0#PHP" expanded="true" />
@@ -688,7 +595,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
+        <state relative-caret-position="651">
           <caret line="44" column="64" selection-end-line="65" selection-end-column="1" />
           <folding>
             <element signature="e#120#147#0#PHP" expanded="true" />
@@ -698,8 +605,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Clients.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="225" column="5" lean-forward="true" selection-start-line="225" selection-start-column="5" selection-end-line="225" selection-end-column="5" />
+        <state relative-caret-position="4683">
+          <caret line="225" column="5" selection-start-line="225" selection-start-column="5" selection-end-line="225" selection-end-column="5" />
           <folding>
             <element signature="e#30#78#0#PHP" expanded="true" />
           </folding>
@@ -714,7 +621,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/ClientFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
+        <state relative-caret-position="924">
           <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="58" selection-end-column="15" />
           <folding>
             <element signature="e#115#138#0#PHP" expanded="true" />
@@ -724,15 +631,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/LoginFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
+        <state relative-caret-position="609">
           <caret line="39" selection-end-line="63" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/ResetPasswordType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+        <state relative-caret-position="1008">
+          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
           <folding>
             <element signature="e#116#156#0#PHP" expanded="true" />
           </folding>
@@ -741,15 +648,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/account/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="399">
           <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/account/resetPassword.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="14" lean-forward="true" selection-end-line="19" selection-end-column="14" />
+        <state relative-caret-position="399">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/scooter/tabStock.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/backOffice.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/scooter/form.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/scooter/scooter.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/backController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/component/_navbar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/back/backSideBar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
         </state>
       </provider>
     </entry>

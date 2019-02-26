@@ -22,7 +22,6 @@
                     <th scope="col">N°</th>
                     <th scope="col">Marque</th>
                     <th scope="col">Model</th>
-                    <th scope="col">SerialNumber</th>
                     <th scope="col">Date arrivage</th>
                     <th scope="col">supprimer</th>
                 </tr>
@@ -33,7 +32,6 @@
                         <td>{{ scooter.idscooter }} </td>
                         <td>{{ scooter.scooterName }} </td>
                         <td>{{ scooter.scooterModel }} </td>
-                        <td>05646514</td>
                         <td>{{ scooter.scooterDateEntry|date('d-m-Y') }}</td>
                         <td><a class="btn-js" href="javascript:void(0)" onclick="deleteScooter({{ scooter.idscooter }});"><i class="fas fa-trash-alt"></i></a></td>
                     </tr>
@@ -49,7 +47,6 @@
                 <th scope="col">N°</th>
                 <th scope="col">Marque</th>
                 <th scope="col">Model</th>
-                <th scope="col">SerialNumber</th>
                 <th scope="col">Date arrivage</th>
                 <th scope="col">supprimer</th>
             </tr>
@@ -60,7 +57,6 @@
                     <td>{{ scooter.idscooter }} </td>
                     <td>{{ scooter.scooterName }} </td>
                     <td>{{ scooter.scooterModel }} </td>
-                    <td>05646514</td>
                     <td>{{ scooter.scooterDateEntry|date('d-m-Y') }}</td>
                     <td><a class="btn-js" href="javascript:void(0)" onclick="deleteScooter({{ scooter.idscooter }});"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
@@ -77,7 +73,6 @@
                 <th scope="col">N°</th>
                 <th scope="col">Marque</th>
                 <th scope="col">Model</th>
-                <th scope="col">SerialNumber</th>
                 <th scope="col">Date arrivage</th>
                 <th scope="col">supprimer</th>
             </tr>
@@ -88,7 +83,6 @@
                     <td>{{ scooter.idscooter }} </td>
                     <td>{{ scooter.scooterName }} </td>
                     <td>{{ scooter.scooterModel }} </td>
-                    <td>05646514</td>
                     <td>{{ scooter.scooterDateEntry|date('d-m-Y') }}</td>
                     <td><a class="btn-js" href="javascript:void(0)" onclick="deleteScooter({{ scooter.idscooter }});"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
@@ -199,7 +193,6 @@
                             <td>${data['id']}</td>
                             <td>${data['name']}</td>
                             <td>${data['model']}</td>
-                            <td>${data['SerialNumber']}</td>
                             <td>Today</td>
                             <td>
                                 <a class="btn-js" href="javascript:void(0)" onclick="deleteScooter(${data['id']});">
